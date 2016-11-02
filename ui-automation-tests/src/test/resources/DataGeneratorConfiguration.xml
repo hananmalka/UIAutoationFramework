@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<config>
+    <language>
+        <en>
+            <space> </space>
+            <big_letters>ABCDEFGHIJKLMNOPQRSTUVWXYZ</big_letters>
+            <small_letters>abcdefghijklmnopqrstuvwxyz</small_letters>
+            <numbers>0123456789</numbers>
+        </en>
+        <ru>
+            <space> </space>
+            <big_letters>АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ</big_letters>
+            <small_letters>абвгдеёжзийклмнопрстуфхцчшщъыьэюя</small_letters>
+            <numbers>0123456789</numbers>
+        </ru>
+    </language>
+    <max_string_size>20</max_string_size>
+    <min_int_value>0</min_int_value>
+    <max_int_value>10000</max_int_value>
+    <min_date>2013-01-01 00:00:00</min_date>
+    <max_date>2015-12-31 23:59:59</max_date>
+</config>
+
