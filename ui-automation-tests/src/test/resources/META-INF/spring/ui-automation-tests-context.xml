@@ -1,0 +1,34 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+    <context:annotation-config />
+
+    <context:component-scan base-package="com.mqm.automation.ui.services.*"/>
+    <context:component-scan base-package="com.ui.automation.common.element.config.*"/>
+    <bean class="com.ui.automation.common.element.config.TestPropertiesImpl"></bean>
+    <bean class="com.ui.automation.selenium.browser.BrowserPageImpl"></bean>
+    <bean class="com.ui.automation.recorder.impl.TestRecorderImpl"></bean>
+    <bean class="com.ui.automation.selenium.lifecycle.DriverTestContextImpl"></bean>
+    <bean class="com.ui.automation.reporter.impl.TestClassAggregator"></bean>
+    <bean class="com.ui.automation.common.junit.TestDetailsHolder"></bean>
+    <bean class="com.ui.automation.selenium.lifecycle.PageTestContextImpl"></bean>
+    <bean class="com.ui.automation.selenium.service.LocatorService"></bean>
+    <bean class="com.ui.automation.locator.ElementLocatorService"></bean>
+    <bean class="com.ui.automation.selenium.browser.AlertPageImpl"></bean>
+    <bean class="com.ui.automation.reporter.impl.ReporterImpl"></bean>
+    <bean class="com.ui.automation.reporter.impl.HtmlTestsStatusGenerator"></bean>
+    <bean class="com.ui.automation.reporter.impl.HtmlClassGenerator"></bean>
+    <bean class="com.ui.automation.tests.components.OOMainApp"></bean>
+    <context:component-scan base-package="com.ui.automation.selenium.wd">
+        <context:exclude-filter type="regex" expression="AngularUtilsTestEventListener" />
+    </context:component-scan>
+    <context:component-scan base-package="com.hp.ui.automation.reporter.impl"/>
+    <context:component-scan base-package="com.hp.ui.automation.recorder.impl"/>
+    <context:component-scan base-package="com.hp.ui.automation.common.*"/>
+    <context:component-scan base-package="com.hp.ui.automation.locator"/>
+    <context:component-scan base-package="com.hp.ui.automation.elements.impl"/>
+    <context:component-scan base-package="com.hp.ui.automation.tests.components"/>
+</beans>

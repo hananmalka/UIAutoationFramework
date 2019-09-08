@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+    <Network>
+        <Basic>
+            <!-- LOCAL HOST = http://localhost.emea.hpqcorp.net:8080/portal -->
+            <Scheme>http</Scheme>
+
+            <!--RUN ON LOCAL SERVER-->
+            <Server>localhost.emea.hpqcorp.net</Server>
+            <Port>8080</Port>
+
+            <!--RUN ON EXT SERVER-->
+            <!--<Server>myd-vm19883.hpswlabs.adapps.hp.com</Server>-->
+            <!--<Port>8081</Port>-->
+
+            <!-- NIGHTLY =  myd-vm01939.hpswlabs.adapps.hp.com:8081/portal -->
+            <!--<Scheme>http</Scheme>-->
+            <!--<Server>myd-vm01939.hpswlabs.adapps.hp.com</Server>-->
+            <!--<Port>8081</Port>-->
+
+            <!-- SAAS - https://mqalb002qngx.saas.hp.com/ui-->
+            <!--<Scheme>https</Scheme>-->
+            <!--<Server>mqalb002qngx.saas.hp.com</Server>-->
+            <!--<Port></Port>-->
+        </Basic>
+        <SSL>
+            <Scheme></Scheme>
+            <Server></Server>
+            <Port></Port>
+        </SSL>
+        <ReverseProxy>
+            <Scheme></Scheme>
+            <Server></Server>
+            <Port></Port>
+        </ReverseProxy>
+        <ForwardProxy>
+            <Scheme></Scheme>
+            <Server></Server>
+            <Port></Port>
+        </ForwardProxy>
+        <Mqm>
+            <Scheme></Scheme>
+            <Server></Server>
+            <Port></Port>
+        </Mqm>
+        <Saas>
+            <Scheme>https</Scheme>
+            <Server>boalb002q.saas.hp.com</Server>
+            <Port></Port>
+        </Saas>
+    </Network>
+    <Workspace>
+        <Basic>
+            <Domain>REST_DOMAIN</Domain>
+            <Project>Proj_rest_test</Project>
+        </Basic>
+        <Customer>
+            <Domain>CUSTOMER</Domain>
+            <Project>cust_rest_test</Project>
+        </Customer>
+    </Workspace>
+    <Users>
+        <loginUser>
+            <User>REST@PNP.com</User>
+            <Password>Welcome1234</Password>
+        </loginUser>
+        <ForwardProxy>
+            <User>proxyadmin</User>
+            <Password>proxyadmin</Password>
+        </ForwardProxy>
+        <Admin>
+            <User>sa</User>
+            <Password></Password>
+        </Admin>
+        <ReadOnly>
+            <User>guest</User>
+            <Password></Password>
+        </ReadOnly>
+        <SaasPortal>
+            <User>mqm_rnd@hpe.com</User>
+            <Password>Password1</Password>
+        </SaasPortal>
+    </Users>
+    <Portal>
+        <saasPortal>false</saasPortal>
+    </Portal>
+</root>

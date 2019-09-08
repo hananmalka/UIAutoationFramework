@@ -1,0 +1,243 @@
+<mapper>
+    <!-- this pattern will replace string that end with e.g. the input save-button will return Save Button-->
+    <!-- locator type="ID" pattern="(.*)-button$" return="%s Button"  / -->
+    <!--locator type="id" pattern="Hello World" return="%s link"  /-->
+    <!--locator type="id" pattern="^tool-bar-button-(.*)-number$" return="%s Button"  /-->
+    <!-- this pattern will replace string that start with e.g. the input toolbar-button-save will return Save Button-->
+    <!--locator type="id" pattern="^tool-bar-button-(.*)" return="%s Button"  /-->
+    <!-- this pattern will replace string that between e.g. the input toolbar-button-save-me will return Save Button-->
+
+    <locator type="DATA_AID" pattern="_PhaseId" return="Phase Picker"/>
+    <locator type="DATA_AID" pattern="delete-image-btn" return="Delete Image Button"/>
+    <locator type="DATA_AID" pattern="image-upload-prog-bar" return="Progress Bar"/>
+    <locator type="CLASS_NAME" pattern="ts-image" return="IMG HTML Element"/>
+    <locator type="CLASS_NAME" pattern="mass-update-title" return="Mass Update Title"/>
+    <locator type="XPATH" pattern=".//textarea" return="Textarea"/>
+    <locator type="XPATH" pattern=".//*[contains(@data-aid,'mu-field-')]" return="Mass Update Field"/>
+    <locator type="DATA_AID" pattern="mu-update-record-lb" return="Mass Update Record Label"/>
+    <locator type="DATA_AID" pattern="move-record-phase-lb" return="Mass Update Phase Label"/>
+    <locator type="DATA_AID" pattern="mu-assign-lb" return="New Value Assign Label"/>
+    <locator type="DATA_AID" pattern="mu-add-field" return="Add Field"/>
+    <locator type="DATA_AID" pattern="mu-remove" return="Remove Field"/>
+    <locator type="DATA_AID" pattern="mu-add-field" return="Add Field"/>
+    <locator type="XPATH" pattern=".//div[@data-aid='datetime-picker-time']//input" return="TimePicker Input Element"/>
+    <locator type="CLASS_NAME" pattern="^bootstrap-timepicker-(.*)" return="%s Picker"/>
+    <locator type="CLASS_NAME" pattern="mass-update-field-name" return="Field Name Selector"/>
+    <locator type="CLASS_NAME" pattern="mass-update-update-button" return="Update Button"/>
+    <locator type="DATA_AID" pattern="^mu-field-(.*)" return="Field Index %s"/>
+    <locator type="DATA_AID" pattern="^picker-col-id-(.*)" return="%s Checkbox"/>
+    <locator type="XPATH" pattern=".//label" return="LABEL HTML Element"/>
+    <locator type="ID" pattern="username" return="User Name TextBox"/>
+    <locator type="ID" pattern="^propertyGrid_(.*)" return="%s"/>
+    <locator type="ID" pattern="^ip-menu-id-field-value-icon-(.*)" return="%s Icon"/>
+    <locator type="ID" pattern="ip-menu-id-field-value-empty" return="Empty Icon"/>
+    <locator type="CLASS_NAME" pattern="^icon-(.*)" return="%s Icon"/>
+    <locator type="DATA_AID" pattern="entity-editor-fields" return="Fields Tab Header"/>
+    <locator type="DATA_AID" pattern="^propertyGrid_(.*)" return="%s"/>
+    <locator type="ID" pattern="^fe-lm-(.*)" return="List Item with id[fe-lm-%s]"/>
+    <locator type="ID" pattern="entityTypesList" return="Entity Type List Picker"/>
+    <locator type="ID" pattern="password" return="Password TextBox"/>
+    <locator type="ID" pattern="submit_button" return="Login Button"/>
+    <locator type="ID" pattern="list-category" return="List Panel"/>
+    <locator type="ID" pattern="ip-btn-id-field-value" return="Icon Picker Dropdown button"/>
+    <locator type="XPATH" pattern="^\.//input\[@type='text' and contains\(@id,'_(.*)'\)\]$" return="%s TextBox"/>
+    <locator type="DATA_AID" pattern="^dialog-button-(.*)" return="%s Button"/>
+    <locator type="DATA_AID" pattern="^tool-bar-btn-(.*)" return="%s Button"/>
+    <locator type="DATA_AID" pattern="failure-count" return="Failures Count"/>
+    <locator type="DATA_AID" pattern="progress-status" return="Progress Status"/>
+    <locator type="DATA_AID" pattern="success-count" return="Success Count"/>
+    <locator type="DATA_AID" pattern="total-count" return="Total Count"/>
+    <locator type="CLASS_NAME" pattern="progress-dialog-error-box" return="Progress Dialog Error Box"/>
+    <locator type="CLASS_NAME" pattern="error-message" return="Error Message"/>
+    <locator type="CLASS_NAME" pattern="requiredAsterisk" return="Required Asterisk "/>
+    <locator type="CLASS_NAME" pattern="btn-open" return="Open Button"/>
+    <locator type="CLASS_NAME" pattern="cke_wysiwyg_div" return="Rich Text Editor Element"/>
+    <locator type="CLASS_NAME" pattern="lang-panel" return="MultiLanguage Panel"/>
+    <locator type="CLASS_NAME" pattern="^lang-(.*)" return="%s Language"/>
+    <locator type="CLASS_NAME" pattern="slick-viewport" return="Grid Table"/>
+    <locator type="CLASS_NAME" pattern="search-query" return="Search Textbox"/>
+    <locator type="CLASS_NAME" pattern="select2-results" return="Select2 Dropdown UL Element"/>
+    <locator type="CLASS_NAME" pattern="select2-results-dept-0" return="Select2 LI element"/>
+    <locator type="CLASS_NAME" pattern="iconpicker-menu" return="Icon Picker Dropdown"/>
+    <locator type="XPATH" pattern="^\.//div\[contains\(@id,'_(.*)_container'\)\]$" return="%s Form Field"/>
+    <locator type="XPATH" pattern="^\.//div\[@data-control-type='RichEditor' and contains\(@data-aid,'_(.*)'\)\]$"
+             return="%s Rich Text Editor"/>
+    <locator type="XPATH"
+             pattern="^.//\*\[contains\(text\(\),'(.*)'\) and ancestor-or-self::div\[contains\(@class,'slick-cell'\)\]\]$"
+             return="Grid Cell With Text[%s]"/>
+    <locator type="XPATH" pattern="^\.//li\[not\(ancestor::li\) and a\[descendant::text\(\)='(.*)'\]\]$"
+             return="Faceted Search Result Node of [%s]"/>
+    <locator type="CLASS_NAME" pattern="tick" return="Check Sign Indicator"/>
+    <locator type="CLASS_NAME" pattern="custom-actions-list-panel" return="Custom Action List Panel"/>
+    <locator type="CLASS_NAME" pattern="modal-body" return="Modal Body"/>
+    <locator type="DATA_AID" pattern="^field_editor_(.*)" return="%s Field Editor"/>
+    <locator type="XPATH"
+             pattern="^//\*\[text\(\)='(.*)' and ancestor-or-self::div\[contains\(@class,'slick-cell'\)\]\]$"
+             return="Grid Cell With Text [%s]"/>
+    <locator type="XPATH" pattern=".//div[contains(@data-aid,'_error')]" return="Error Message"/>
+    <locator type="XPATH" pattern=".//*[contains(@data-aid,'_error')]" return="Error Message"/>
+    <locator type="XPATH" pattern=".//*[@data-aid='fs-btn-toggle-panel' and not (contains(@class, 'panel-expanded'))]"
+             return="Sidebar Group Button"/>
+    <locator type="XPATH" pattern=".//div[@role='textbox']" return="TextBox Element"/>
+    <locator type="XPATH" pattern="..//select" return="Select Tag Element"/>
+    <locator type="DATA_AID" pattern="^sidebar-btn-(.*)" return="Sidebar %s Button"/>
+    <locator type="DATA_AID" pattern="fs-result-tree" return="Faceted Result UL Tree"/>
+    <locator type="DATA_AID" pattern="fs-grouping-tree-root" return="All tree node"/>
+    <locator type="DATA_AID" pattern="report-properties-field-general" return="General Tab Header"/>
+    <locator type="DATA_AID" pattern="report-properties-field-format" return="Format Tab Header"/>
+    <locator type="DATA_AID" pattern="report-properties-field-Entity" return="Record Type Field"/>
+    <locator type="DATA_AID" pattern="^report-properties-field-(.*)" return="%s Properties Field"/>
+    <locator type="DATA_AID" pattern="^dashboard-command-(.*)" return=" %s Button"/>
+    <locator type="DATA_AID" pattern="^grid_header_(.*)" return="Grid Column [%s]"/>
+    <locator type="XPATH" pattern=".//li[contains(@id,'fe-lm-')]" return="List Item"/>
+    <locator type="DATA_AID" pattern="^picker-col-id-(.*)" return="Column Picker Item [%s]"/>
+    <locator type="DATA_AID" pattern="^column-picker-(.*)" return="%s Column Picker Button"/>
+    <locator type="DATA_AID" pattern="custom-actions-details-panel" return="Custom Action Details Panel"/>
+    <locator type="DATA_AID" pattern="^menu-item-(.*)" return="%s Menu Button"/>
+    <locator type="DATA_AID" pattern="on-add-to-dashboard" return="Click to add Button"/>
+    <locator type="DATA_AID" pattern="add-report-to-dialog-btn-add" return="Create a new report Button"/>
+    <locator type="DATA_AID" pattern="favorites-display-dialog" return="Edit Views Button"/>
+    <locator type="DATA_AID" pattern="gridFavoritesBar" return="Favorite-View Bar"/>
+    <locator type="DATA_AID" pattern="fav-btn-saveAs" return="Save As Button"/>
+    <locator type="DATA_AID" pattern="fav-btn-delete" return="Delete Button"/>
+    <locator type="DATA_AID" pattern="fav-btn-save" return="Save Button"/>
+    <locator type="DATA_AID" pattern="fav-btn-hide" return="Hide Button"/>
+    <locator type="DATA_AID" pattern="is-private-label" return="Is Private Label"/>
+    <locator type="DATA_AID" pattern="is-public-label" return="Is Public Label"/>
+    <locator type="DATA_AID" pattern="fav-dirty" return="Favorite View Dirty Star"/>
+    <locator type="DATA_AID" pattern="entity-editor-custom-actions" return="Custom Action Tab Header"/>
+    <locator type="DATA_AID" pattern="custom-action-tab-content" return="Custom Action Tab Content"/>
+    <locator type="DATA_AID" pattern="fav-all" return="Tab [All]"/>
+    <locator type="DATA_AID" pattern="fav-name-input" return="View Name Text Box"/>
+    <locator type="DATA_AID" pattern="fav-private" return="Tab [Private]"/>
+    <locator type="DATA_AID" pattern="searchFavoriteInput" return="Favorite Search Text Box"/>
+    <locator type="XPATH" pattern=".//div[@pl-grid-toolbar]" return="Grid Toolbar"/>
+    <locator type="XPATH" pattern=".//a" return="A Link Tag"/>
+    <locator type="XPATH" pattern="./a" return="A Link Tag"/>
+    <locator type="XPATH" pattern="^\.//a\[@title='(.*)'\]$" return="A Link Tag with @Title [%s]"/>
+    <locator type="DATA_AID" pattern="^view-name-(.*)" return="Favorite View Named [%s]"/>
+    <locator type="XPATH" pattern="^\.//a\[@title='(.*)']//\.\.//\*\[contains\(@class,'selected-favorites-arrow'\)\]$"
+             return="Favorite View Selected Arrow indicator of [%s]"/>
+
+
+    <locator type="XPATH" pattern=".." return="Parent HTML Element"/>
+    <locator type="XPATH" pattern=".//input[@type='checkbox']" return="Input type Checkbox"/>
+    <locator type="CLASS_NAME" pattern="send-me-copy-lb" return="Send me copy"/>
+    <locator type="CLASS_NAME" pattern="ts-email-entity-message" return="Email Message"/>
+    <locator type="ID" pattern="select2-drop" return="Drop Down List"/>
+    <locator type="ID" pattern="menu-categories" return="Menu Drop Down List"/>
+    <locator type="ID" pattern="saveButton" return="Save Button"/>
+    <locator type="ID" pattern="dialog-title-text" return="Dialog Text Title"/>
+    <locator type="ID" pattern="dialog-close-button" return="Dialog Close Button"/>
+    <locator type="CLASS_NAME" pattern="dropdown-toggle" return="Drop Down Button"/>
+    <locator type="CLASS_NAME" pattern="grid-favorites-view" return="Favorite-view Views Container"/>
+    <locator type="CLASS_NAME" pattern="grid-favorites-view-slot" return="Favorite-view Inner Bar Container"/>
+    <locator type="CLASS_NAME" pattern="dropdown-menu" return="Drop Down Menu"/>
+    <locator type="CLASS_NAME" pattern="application-menu-main-button" return="application-menu-main-button"/>
+    <locator type="CLASS_NAME" pattern="tab-panel-navigation-item-tab-dirty" return="Dirty Indicator Item"/>
+    <locator type="CLASS_NAME" pattern="tab-panel-navigation-item-tab-errors" return="Error Indicator Item"/>
+    <locator type="CLASS_NAME" pattern="node-count" return="Node Count"/>
+    <locator type="XPATH" pattern=".//*[contains(@data-aid, 'preview_') and @data-control-type]"
+             return="Entity Preview Element"/>
+    <locator type="XPATH" pattern=".//input[contains(@class, 'select2-focusser')]" return="Input Element"/>
+    <locator type="XPATH" pattern="^\.//li\[descendant::\*\[contains\(text\(\),'(.*)'\)\]\]$"
+             return="List Item Contain Text [%s]"/>
+    <locator type="XPATH" pattern="^\.//li\[descendant::\*\[text\(\)='(.*)'\]\]$" return="List Item Exact Text [%s]"/>
+    <locator type="XPATH" pattern="^\.//label\[descendant::span\[text\(\)='(.*)'\]\]$"
+             return="Label With Exact Text [%s]"/>
+    <locator type="XPATH" pattern="^\.//label\[descendant::input\[@data-aid='flt-cb-id-(.*)'\]\]$"
+             return="%s Checkbox"/>
+    <locator type="XPATH" pattern="^\.//input\[@type='checkbox' and contains\(@id,'_(.*)'\)\]//\.\.$"
+             return="%s Checkbox"/>
+    <locator type="DATA_AID" pattern="^date-range-picker-(.*)" return="%s Date List Item"/>
+
+    <locator type="XPATH" pattern="^\.//a\[contains\(@data-aid,'fs-dropdown-list-'\) and text\(\)='(.*)'\]$"
+             return="Drop Down Field [%s]"/>
+    <locator type="XPATH" pattern="^\.//a\[contains\(@data-aid,'fs-dropdown-list-'\) and text\(\)='(.*)'\]/\.\.$"
+             return="Drop Down Field [%s]"/>
+
+    <locator type="XPATH" pattern="^\.//div\[@data-aid='(.*)' and @portlet='portlet'\]$"
+             return="Report Widget With Name [%s]"/>
+    <locator type="XPATH"
+             pattern="^\.//pl-filter-field\[descendant::span\[@data-aid='filter_field_span_(.*)'\]\]//input$"
+             return="%s Filter Bubble Text Box"/>
+    <locator type="CLASS_NAME" pattern="platform-filter-field-predicate-viewer" return="Filter Bubble Viewer"/>
+    <locator type="CLASS_NAME" pattern="grouping-field-name" return="Selected Group Name"/>
+    <locator type="XPATH" pattern="^\.//pl-filter-field\[descendant::span\[@data-aid='filter_field_span_(.*)'\]\]$"
+             return="%s Filter Bubble"/>
+    <locator type="DATA_AID" pattern="^tab-panel-nav-(.*)" return="%s Tab Panel Item"/>
+    <locator type="DATA_AID" pattern="^tab-panel-content-(.*)" return="%s Tab Content"/>
+    <locator type="DATA_AID" pattern="filter_clear" return="Clear All Filters Button"/>
+    <locator type="DATA_AID" pattern="show-more" return="Show More"/>
+    <locator type="DATA_AID" pattern="fs-lv0" return="First Faceted Search Selector"/>
+    <locator type="DATA_AID" pattern="fs-lv1" return="Second Faceted Search Selector"/>
+    <locator type="DATA_AID" pattern="fs-lv2" return="Third Faceted Search Selector"/>
+    <locator type="DATA_AID" pattern="fs-lv3" return="Fourth Faceted Search Selector"/>
+    <locator type="DATA_AID" pattern="custom-field-inline-add" return="Add Link label"/>
+    <locator type="CLASS_NAME" pattern="available-fields" return="Field Dropdown Menu"/>
+    <locator type="DATA_AID" pattern="fs-sort-lb" return="Sort By Groups Checkbox"/>
+
+    <locator type="DATA_AID" pattern="current-phase-name" return="Current Phase Name"/>
+    <locator type="DATA_AID" pattern="fs-dropdown-list-clear-group" return="Clear Group Item"/>
+    <locator type="DATA_AID" pattern="next-phase-name" return="Next Phase Name Button"/>
+    <locator type="DATA_AID" pattern="^btn-checkboxes-(.*)" return="%s Button"/>
+    <locator type="XPATH" pattern=".//div[@id='multiButton']//button[contains(@class,'phase-button-no-overflow')]"
+             return="Phase Button"/>
+
+    <locator type="XPATH"
+             pattern="^\.//pl-filter-field\[descendant::span\[@data-aid='filter_field_span_(.*)']]//span\[@data-aid='platform-filter-field-remove'\]$"
+             return="Remove %s Filter Button"/>
+
+
+    <locator type="XPATH" pattern=".//div[@pl-entity-page-toolbar]" return="Entity Page Toolbar"/>
+    <locator type="XPATH" pattern=".//*[contains(@class,'select2-choice')]" return="Select2-Choice"/>
+    <locator type="CLASS_NAME" pattern="select2-chosen" return="select2-chosen"/>
+    <locator type="CLASS_NAME" pattern="ts-email-entity-recipients" return="Email Entity Recipients Picker"/>
+    <locator type="XPATH" pattern=".//div[contains(@class,'select2-container') and following-sibling::select]"
+             return="Drop Down List Element"/>
+    <locator type="ID" pattern="dialog-main-content" return="Dialog Content"/>
+    <locator type="ID" pattern="dialog-context-text" return="Dialog Text Context"/>
+    <locator type="ID" pattern="groupName" return="Group Name"/>
+    <locator type="CLASS_NAME" pattern="input-small" return="Input Element"/>
+    <locator type="CLASS_NAME" pattern="recent-conversations-list" return="Recent Conversations List"/>
+    <locator type="XPATH"
+             pattern="^\.//div\[@data-control-type='DatePicker' and contains\(@data-aid,'(.*)'\)\]\/\/div\[@class='input-with-btn-container'\]$"
+             return="%s Date Box Picker"/>
+    <locator type="XPATH" pattern="^\.//div\[@data-control-type='DropDownList' and contains\(@data-aid,'_(.*)'\)\]$"
+             return="%s Drop Down List"/>
+    <locator type="DATA_AID" pattern="^tool-bar-main-dd-btn-(.*)" return="%s Drop Down Button"/>
+    <locator type="DATA_AID" pattern="^tool-bar-dd-container-(.*)" return="%s Drop Down Button Container"/>
+    <locator type="DATA_AID" pattern="^tool-bar-inner-dd-btn-(.*)" return="%s Inner Drop Down Button"/>
+    <locator type="CLASS_NAME" pattern="pl-entity-page-component-header-inner-wrapper" return="Section Header"/>
+    <locator type="CLASS_NAME" pattern="pl-discussion-items-tab" return="Discussion Tab Area"/>
+    <locator type="CLASS_NAME" pattern="discussionItems" return="Discussion Posted Items Area"/>
+    <locator type="CLASS_NAME" pattern="discussionItem" return="Discussion Posted Item"/>
+    <locator type="CLASS_NAME" pattern="conversation-bar" return="Conversation Bar"/>
+    <locator type="DATA_AID" pattern="attachment-container" return="Attachment Container"/>
+    <locator type="ID" pattern="attachmentsArea" return="Attachments Area"/>
+    <locator type="DATA_AID" pattern="add-attachments-input" return="Add Attachment Input"/>
+    <locator type="ID" pattern="attachment-size" return="Attachment Size"/>
+    <locator type="DATA_AID" pattern="remove-attach-btn" return="Remove Attachment Button"/>
+    <locator type="XPATH" pattern=".//span[contains(@class,'pl-entity-page-component-header-counter')]"
+             return="Section Header Counter"/>
+    <locator type="XPATH" pattern="^\.//div\[@data-aid='attachment-container' and descendant::a\[text\(\)='(.*)'\]\]$"
+             return="Attachment Container with Text [%s]"/>
+    <locator type="DATA_AID" pattern="post-posted-text" return="Discussion Posted Text"/>
+    <locator type="DATA_AID" pattern="^con-modal-(.*)-btn$" return="%s Button"/>
+    <locator type="DATA_AID" pattern="^con-(.*)-btn$" return="%s Button"/>
+    <locator type="DATA_AID" pattern="post-content-text" return="Post Text Area"/>
+    <locator type="DATA_AID" pattern="conversation-item-open-con-btn" return="Open Discussions Button"/>
+    <locator type="DATA_AID" pattern="discussion-items-new-comment-add-btn" return="Post Button"/>
+    <locator type="DATA_AID" pattern="^con-modal-more-actions-(.*)" return="%s Discussion Button"/>
+    <locator type="DATA_AID" pattern="main-toolbar-logout" return="Logout Button"/>
+    <locator type="DATA_AID" pattern="con-modal-btn-more-actions" return="More Actions Drop Down Button"/>
+    <locator type="XPATH" pattern=".//form[@id='loginform' or @id='loginForm']" return="Login Form"/>
+    <locator type="XPATH" pattern="//img[@data-aid='con-modal-minimized-btn' and @class='']" return="Maximize Button"/>
+    <locator type="XPATH"
+             pattern="^//div\[contains\(@class, 'conversation-dialog-title'\) and contains\(text\(\), '(.*)'\)\]$"
+             return="Conversion Dialog Title with Text [%s]"/>
+
+    <locator type="DATA_AID" pattern="grid-footer-totalItems" return="Total Items Label"/>
+    <locator type="DATA_AID" pattern="grid-footer-selectedItems" return="Selected Records Label"/>
+
+</mapper>
