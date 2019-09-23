@@ -6,22 +6,22 @@ import com.ui.automation.elements.controls.ToggleButton;
 import com.ui.automation.elements.controls.dropdowns.AuraDropDown;
 import com.ui.automation.enums.LimitationEnum;
 import com.ui.automation.locator.Locator;
-import com.ui.automation.pages.advertisers.newAdvertiserPage.elements.panes.BudgetAndTimeLimitationTogglesPane;
-import com.ui.automation.pages.campaigns.newCampaginPage.elements.panes.LimitationRowPane;
+import com.ui.automation.pages.advertisers.newAdvertiserPage.elements.panes.BudgetAndTimeLimitationTogglesPanel;
+import com.ui.automation.pages.campaigns.newCampaginPage.elements.panels.LimitationRowPanel;
 
 public class BudgetAndTimeLimitationGroup extends Form {
 
-    static BudgetAndTimeLimitationTogglesPane togglesLimitationPane;
+    static BudgetAndTimeLimitationTogglesPanel togglesLimitationPane;
     static ToggleButton budgetToggleAutoManager;
 
     public BudgetAndTimeLimitationGroup(BaseElement parent) {
         super(Locator.className("capping-section "), parent);
-        togglesLimitationPane = new BudgetAndTimeLimitationTogglesPane(this);
+        togglesLimitationPane = new BudgetAndTimeLimitationTogglesPanel(this);
         budgetToggleAutoManager = toggleButton(Locator.id("budget-auto-manager-toggle"));
     }
 
-    public LimitationRowPane limitationRowPane(LimitationEnum limitationEnum) {
-        return new LimitationRowPane(limitationEnum, this);
+    public LimitationRowPanel limitationRowPane(LimitationEnum limitationEnum) {
+        return new LimitationRowPanel(limitationEnum, this);
     }
 
     public AuraDropDown addLimitationDropDown() {

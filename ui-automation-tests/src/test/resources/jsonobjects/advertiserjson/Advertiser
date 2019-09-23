@@ -1,0 +1,125 @@
+{
+  "campaignsSegments": [],
+  "idCampaign": 1016345,
+  "costModel": "CPI",
+  "name": "com.demo_TR",
+  "externalId": 1016345,
+  "packageName": "com.demo",
+  "publishers": [
+    {
+      "internal_publisher_id": "androids",
+      "id_publisher": 1,
+      "id_status": 2
+    }
+  ],
+  "impression_url": "",
+  "install_url": "http://twitter.tlnk.io/serve?action=click&site_id=64980&url_android=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.twitter.android%26referrer%3Dtwsrc%255EIronSourcePreload%257Ctwcamp%255EPreload_Test%257Ctwgr%255EUS_Test%257Ctwcon%255EPreload&url_web=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.twitter.android%26referrer%3Dtwsrc%255EIronSourcePreload%257Ctwcamp%255EPreload_Test%257Ctwgr%255EUS_Test%257Ctwcon%255EPreload&%243p=a_aura&cost_model={BusinessModel}&%24aaid={GAID}&~click_id={DynamicParameter}&sub_campaign={CampaignID}&sub_campaign_name={CampaignName}&~cost_currency=USD&~secondary_publisher={PublisherId}&~campaign=BD_IronSource_Preload_Test930480832940839849384984938983948938493849839483984",
+  "landing_page_validation_url": "",
+  "saveDate": "2019-09-08T18:54:59.000Z",
+  "creationDate": "2019-09-08T18:54:59.000Z",
+  "network": {
+    "source": null,
+    "id_status": 2,
+    "status": "not available",
+    "went_live": "2019-09-08T18:54:59.000Z"
+  },
+  "bids": {
+    "geos": [
+      {
+        "id_cc": 1,
+        "name": "Turkey"
+      }
+    ],
+    "rate": 1
+  },
+  "targeting": {},
+  "capping": {
+    "enabled": true,
+    "automatically_managed": false,
+    "advertiser_id": 1,
+    "capping_rules": [],
+    "alerts": {},
+    "email_list": [],
+    "source": "campaign_management",
+    "additional_data": {},
+    "capping_groups": [],
+    "block_daily_limitation": false,
+    "block_monthly_total_limitation": false
+  },
+  "placements": {
+    "null": [
+      {
+        "id_campaign_placement": 47415,
+        "id_campaign": 1016345,
+        "id_publisher": null,
+        "id_placement": 4,
+        "percentage": 100
+      }
+    ]
+  },
+  "rankingFactors": {
+    "1": {
+      "id_campaign_ranking_factor": 55170,
+      "id_campaign": 1016345,
+      "id_publisher": 1,
+      "id_factor": 1,
+      "expiration_date": null,
+      "last_update": "2019-09-08T18:54:59.000Z"
+    },
+    "null": {
+      "id_campaign_ranking_factor": 55171,
+      "id_campaign": 1016345,
+      "id_publisher": null,
+      "id_factor": 2,
+      "expiration_date": null,
+      "last_update": "2019-09-08T18:54:59.000Z"
+    }
+  },
+  "campaignFsos": {},
+  "advertiserTitles": {
+    "id_advertiser_title": 785,
+    "id_advertiser": 1,
+    "package_name": "com.demo",
+    "icon": "",
+    "id_tracking_solution": 1,
+    "description": "com.demo",
+    "advertisers": {
+      "id_advertiser": 1,
+      "name": "Upopa Games",
+      "owner": 39,
+      "salesforce_id": "006b000000IZeOXAA1",
+      "id_status": 1,
+      "id_sf_advertiser": "AA1",
+      "is_rev_share": false,
+      "support_install_intent": false,
+      "support_launch_intent": false,
+      "token": null,
+      "users": {
+        "id_user": 39,
+        "username": "openx@ironsrc.com"
+      }
+    },
+    "trackingSolution": {
+      "id_tracking_solution": 1,
+      "name": "AppsFlyer",
+      "token": "ed050138-cb1e-43bc-88e1-3cfb7dd61710",
+      "logo": "http://assetscdn.isappcloud.com/campaign-mgmt/icons/appsflyer.svg",
+      "click_url": "https://app.appsflyer.com/",
+      "impression_url": "https://impression.appsflyer.com/",
+      "mandatory_parameters": "",
+      "optional_placeholders": "PackageName,PayOut,CampaignId,CampaignName,BusinessModel,Country,ip,OsVersion,Placement,PublisherName,Os,AppsFlyerEncData,PublisherId,DynamicParameter,GAID,CustomerID,CampaignID,CampaignName,ip,ua,DeviceModel,Age,Gender,timestamp,CampaignSegmentId,CampaignSegmentName",
+      "validate_impression_url": false,
+      "validate_click_url": false,
+      "allow_impression_autofill": true,
+      "require_click_url": true,
+      "validate_landing_page_url": false,
+      "parametersReplacements": []
+    }
+  },
+  "engagementEvent": 12,
+  "fsoApprovedPublishers": [],
+  "notificationsApprovedPublishers": [],
+  "install_intent": "",
+  "launch_intent": "",
+  "campaignNotifications": []
+}

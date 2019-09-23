@@ -11,6 +11,7 @@ import com.ui.automation.common.element.config.TestProperties;
 import com.ui.automation.common.element.items.SpecialKeys;
 import com.ui.automation.selenium.service.LocatorService;
 import com.ui.automation.selenium.wd.angular.ClientSideScripts;
+import org.imgscalr.Scalr;
 import org.openqa.selenium.*;
 import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.logging.LogType;
@@ -34,10 +35,7 @@ import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Date;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.logging.Logger;
 
 /**
@@ -49,7 +47,7 @@ import java.util.logging.Logger;
 @Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class MaasDriverImpl implements MaasDriver {
 
-    private static final float QUALITY_RATIO = 0.3f;
+    private static final float QUALITY_RATIO = 0.8f;
     private WebDriver driver;
     private Eyes eyes;
     private DriverServices driverServices;
@@ -360,31 +358,13 @@ public class MaasDriverImpl implements MaasDriver {
                 FileInputStream inputStream = new FileInputStream(screenshot);
                 BufferedImage originalImage = ImageIO.read(inputStream);
 
-                Iterator iter = ImageIO.getImageWritersByFormatName("jpeg");
-                ImageWriter writer = (ImageWriter)iter.next();
-                ImageWriteParam iwp = writer.getDefaultWriteParam();
-
-                iwp.setCompressionMode(ImageWriteParam.MODE_EXPLICIT);
-                float quality = QUALITY_RATIO;
-                iwp.setCompressionQuality(quality);
-
-                // Copy to given path
-                Path sourceFile = screenshot.toPath();
-                // The following code will throw if target already exists
-                // Since the combination of class name and method name
-                // should be unique this is ok
                 Files.createDirectories(targetDir);
                 Path targetFile = Paths.get(targetDir.toString(), fileName);
                 logger.info("Saving screenshot to " + targetFile.toString());
 
                 File file = new File(targetFile.toString());
-                FileImageOutputStream output = new FileImageOutputStream(file);
-                writer.setOutput(output);
-
-                IIOImage image = new IIOImage(originalImage, null, null);
-                writer.write(null, image, iwp);
-                writer.dispose();
-
+                BufferedImage resizedImage = Scalr.resize(originalImage, Scalr.Method.QUALITY, Scalr.Mode.FIT_EXACT, originalImage.getWidth(), originalImage.getHeight(), Scalr.OP_ANTIALIAS);
+                ImageIO.write(resizedImage, "png", file);
             } catch (FileAlreadyExistsException e) {
                 // Ignore, just save the file
             } catch (IOException ioe) {

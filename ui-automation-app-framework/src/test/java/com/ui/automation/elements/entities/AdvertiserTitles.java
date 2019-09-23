@@ -1,99 +1,85 @@
 package com.ui.automation.elements.entities;
 
-import com.google.gson.annotations.Expose;
+import javax.annotation.Generated;
 import com.google.gson.annotations.SerializedName;
 
-import java.util.List;
+@Generated("com.robohorse.robopojogenerator")
+public class AdvertiserTitles{
 
-public class AdvertiserTitles {
+	@SerializedName("id_tracking_solution")
+	private int idTrackingSolution;
 
-    @SerializedName("id_advertiser_title")
-    @Expose
-    private Integer idAdvertiserTitle;
-    @SerializedName("id_advertiser")
-    @Expose
-    private Integer idAdvertiser;
-    @SerializedName("package_name")
-    @Expose
-    private String packageName;
-    @SerializedName("icon")
-    @Expose
-    private String icon;
-    @SerializedName("id_tracking_solution")
-    @Expose
-    private Integer idTrackingSolution;
-    @SerializedName("description")
-    @Expose
-    private String description;
-    @SerializedName("advertisers")
-    @Expose
-    private List<Advertiser> advertisers;
-//    @SerializedName("trackingSolution")
-//    @Expose
-//    private TrackingSolution trackingSolution;
+	@SerializedName("id_advertiser")
+	private String idAdvertiser;
 
-    public Integer getIdAdvertiserTitle() {
-        return idAdvertiserTitle;
-    }
+	@SerializedName("advertisers")
+	private Advertisers advertisers;
 
-    public void setIdAdvertiserTitle(Integer idAdvertiserTitle) {
-        this.idAdvertiserTitle = idAdvertiserTitle;
-    }
+	@SerializedName("package_name")
+	private String packageName;
 
-    public Integer getIdAdvertiser() {
-        return idAdvertiser;
-    }
+	@SerializedName("description")
+	private String description;
 
-    public void setIdAdvertiser(Integer idAdvertiser) {
-        this.idAdvertiser = idAdvertiser;
-    }
+	@SerializedName("id_advertiser_title")
+	private String idAdvertiserTitle;
 
-    public String getPackageName() {
-        return packageName;
-    }
+	@SerializedName("trackingSolution")
+	private TrackingSolution trackingSolution;
 
-    public void setPackageName(String packageName) {
-        this.packageName = packageName;
-    }
+	public void setIdTrackingSolution(int idTrackingSolution){
+		this.idTrackingSolution = idTrackingSolution;
+	}
 
-    public String getIcon() {
-        return icon;
-    }
+	public int getIdTrackingSolution(){
+		return idTrackingSolution;
+	}
 
-    public void setIcon(String icon) {
-        this.icon = icon;
-    }
+	public void setIdAdvertiser(String idAdvertiser){
+		this.idAdvertiser = idAdvertiser;
+	}
 
-    public Integer getIdTrackingSolution() {
-        return idTrackingSolution;
-    }
+	public String getIdAdvertiser(){
+		return idAdvertiser;
+	}
 
-    public void setIdTrackingSolution(Integer idTrackingSolution) {
-        this.idTrackingSolution = idTrackingSolution;
-    }
+	public void setAdvertisers(Advertisers advertisers){
+		this.advertisers = advertisers;
+	}
 
-    public String getDescription() {
-        return description;
-    }
+	public Advertisers getAdvertisers(){
+		return advertisers;
+	}
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
+	public void setPackageName(String packageName){
+		this.packageName = packageName;
+	}
 
-    public List<Advertiser> getAdvertisers() {
-        return advertisers;
-    }
+	public String getPackageName(){
+		return packageName;
+	}
 
-    public void setAdvertisers(List<Advertiser> advertisers) {
-        this.advertisers = advertisers;
-    }
+	public void setDescription(String description){
+		this.description = description;
+	}
 
-//    public TrackingSolution getTrackingSolution() {
-//        return trackingSolution;
-//    }
-//
-//    public void setTrackingSolution(TrackingSolution trackingSolution) {
-//        this.trackingSolution = trackingSolution;
-//    }
+	public String getDescription(){
+		return description;
+	}
 
+	public void setIdAdvertiserTitle(String idAdvertiserTitle){
+		this.idAdvertiserTitle = idAdvertiserTitle;
+	}
+
+	public String getIdAdvertiserTitle(){
+		return idAdvertiserTitle;
+	}
+
+	public void setTrackingSolution(TrackingSolution trackingSolution){
+		this.trackingSolution = trackingSolution;
+	}
+
+	public TrackingSolution getTrackingSolution(){
+		return trackingSolution;
+	}
 }

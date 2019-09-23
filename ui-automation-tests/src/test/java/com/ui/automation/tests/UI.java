@@ -13,7 +13,7 @@ public class UI extends BasePage {
     public static LoginPage loginPage = new LoginPage();
     public static SideBarMenu sideBarMenu = new SideBarMenu();
     public static CampaignsPage campaignsPage = new CampaignsPage();
-    public static NewCampaignPage newCampaignPage = new NewCampaignPage();
+    public static NewCampaignPage newCampaignPage = new NewCampaignPage();;
     public static AdvertisersPage advertisersPage = new AdvertisersPage();
     public static NewAdvertiserPage neAdvertiserPage = new NewAdvertiserPage();
 

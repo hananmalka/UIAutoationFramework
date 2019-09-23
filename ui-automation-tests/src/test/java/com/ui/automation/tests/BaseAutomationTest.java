@@ -28,9 +28,15 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestExecutionListeners;
 import org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
+
+import static java.lang.System.getProperty;
 
 // TODO: we need the MaasRunner in order to run the `ReportRunListener`
 // in order to remove it we need to move the logic to another listener (maybe ReportCreationListener)
@@ -84,7 +90,6 @@ public abstract class BaseAutomationTest extends AbstractJUnit4SpringContextTest
             if (beforeClassMethodsCalled) {
                 return;
             }
-
             List<Method> beforeClassMethods = getNonStaticBeforeClassMethods(BaseAutomationTest.this.getClass());
             for (Method beforeClassMethod : beforeClassMethods) {
                 try {
@@ -134,15 +139,10 @@ public abstract class BaseAutomationTest extends AbstractJUnit4SpringContextTest
     // TODO: DANA - ALEX - is this the right way to login in the browser
     private void uiAuthenticate() {
         Browser browser = driverTestContext.getDriver().browser();
-
-//        driverTestContext.getDriver().browser().get("http://localhost:8080/oo");
-//
-//        delay(2 * 1000);
-
-        driverTestContext.getDriver().browser().get("https://authentication-service-qa.isappcloud.com/?origin=cm-qa");
-
-
-
+        driverTestContext.getDriver().browser().get("https://authentication-service-autoqa.isappcloud.com/?origin=cm-autoqa");
+        String username = getProperty("config.properties", "defaultUsername");
+        String password = getProperty("config.properties", "defaultPassword");
+        UI.loginPage.performLogin(username, password);
     }
 
     private void delay(long millis)  {
@@ -164,6 +164,34 @@ public abstract class BaseAutomationTest extends AbstractJUnit4SpringContextTest
         url = url.replace("<workspaceId>", workspaceId);
 
         return url;
+    }
+
+
+    private static String getProperty(String fileName, String property) {
+        String result = "";
+        Properties prop = new Properties();
+        InputStream input = null;
+        try {
+            String accountsFilePath = ClassLoader.getSystemResource(fileName).getFile();
+            input = new FileInputStream(accountsFilePath);
+
+            // load a properties file
+            prop.load(input);
+
+            result = prop.getProperty(property);
+
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        } finally {
+            if (input != null) {
+                try {
+                    input.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return result;
     }
 }
 

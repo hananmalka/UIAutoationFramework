@@ -4,15 +4,15 @@ import com.ui.automation.elements.base.BaseElement;
 import com.ui.automation.elements.containers.Form;
 import com.ui.automation.elements.controls.Button;
 import com.ui.automation.locator.Locator;
-import com.ui.automation.pages.advertisers.newAdvertiserPage.elements.panes.BudgetGroupPane;
+import com.ui.automation.pages.advertisers.newAdvertiserPage.elements.panes.BudgetGroupPanel;
 
 public class BudgetGroup extends Form {
 
-    static BudgetGroupPane budgetGroupPane;
+    static BudgetGroupPanel budgetGroupPane;
 
     public BudgetGroup(BaseElement parent) {
         super(Locator.className("budgetGroupSection"), parent);
-        budgetGroupPane = new BudgetGroupPane(this);
+        budgetGroupPane = new BudgetGroupPanel(this);
     }
 
     public Button addGroupButton() {

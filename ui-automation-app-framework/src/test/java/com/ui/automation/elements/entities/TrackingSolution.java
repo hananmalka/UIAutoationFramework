@@ -1,164 +1,152 @@
 package com.ui.automation.elements.entities;
 
 import java.util.List;
-import com.google.gson.annotations.Expose;
+import javax.annotation.Generated;
 import com.google.gson.annotations.SerializedName;
 
-public class TrackingSolution {
+@Generated("com.robohorse.robopojogenerator")
+public class TrackingSolution{
 
-    @SerializedName("id_tracking_solution")
-    @Expose
-    private Integer idTrackingSolution;
-    @SerializedName("name")
-    @Expose
-    private String name;
-    @SerializedName("token")
-    @Expose
-    private String token;
-    @SerializedName("logo")
-    @Expose
-    private String logo;
-    @SerializedName("click_url")
-    @Expose
-    private String clickUrl;
-    @SerializedName("impression_url")
-    @Expose
-    private String impressionUrl;
-    @SerializedName("mandatory_parameters")
-    @Expose
-    private String mandatoryParameters;
-    @SerializedName("optional_placeholders")
-    @Expose
-    private String optionalPlaceholders;
-    @SerializedName("validate_impression_url")
-    @Expose
-    private Boolean validateImpressionUrl;
-    @SerializedName("validate_click_url")
-    @Expose
-    private Boolean validateClickUrl;
-    @SerializedName("allow_impression_autofill")
-    @Expose
-    private Boolean allowImpressionAutofill;
-    @SerializedName("require_click_url")
-    @Expose
-    private Boolean requireClickUrl;
-    @SerializedName("validate_landing_page_url")
-    @Expose
-    private Boolean validateLandingPageUrl;
-    @SerializedName("parametersReplacements")
-    @Expose
-    private List<Object> parametersReplacements = null;
+	@SerializedName("optional_placeholders")
+	private String optionalPlaceholders;
 
-    public Integer getIdTrackingSolution() {
-        return idTrackingSolution;
-    }
+	@SerializedName("validate_click_url")
+	private boolean validateClickUrl;
 
-    public void setIdTrackingSolution(Integer idTrackingSolution) {
-        this.idTrackingSolution = idTrackingSolution;
-    }
+	@SerializedName("validate_landing_page_url")
+	private boolean validateLandingPageUrl;
 
-    public String getName() {
-        return name;
-    }
+	@SerializedName("parametersReplacements")
+	private List<Object> parametersReplacements;
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	@SerializedName("allow_impression_autofill")
+	private boolean allowImpressionAutofill;
 
-    public String getToken() {
-        return token;
-    }
+	@SerializedName("id_tracking_solution")
+	private int idTrackingSolution;
 
-    public void setToken(String token) {
-        this.token = token;
-    }
+	@SerializedName("mandatory_parameters")
+	private String mandatoryParameters;
 
-    public String getLogo() {
-        return logo;
-    }
+	@SerializedName("name")
+	private String name;
 
-    public void setLogo(String logo) {
-        this.logo = logo;
-    }
+	@SerializedName("validate_impression_url")
+	private boolean validateImpressionUrl;
 
-    public String getClickUrl() {
-        return clickUrl;
-    }
+	@SerializedName("logo")
+	private String logo;
 
-    public void setClickUrl(String clickUrl) {
-        this.clickUrl = clickUrl;
-    }
+	@SerializedName("impression_url")
+	private String impressionUrl;
 
-    public String getImpressionUrl() {
-        return impressionUrl;
-    }
+	@SerializedName("click_url")
+	private String clickUrl;
 
-    public void setImpressionUrl(String impressionUrl) {
-        this.impressionUrl = impressionUrl;
-    }
+	@SerializedName("require_click_url")
+	private boolean requireClickUrl;
 
-    public String getMandatoryParameters() {
-        return mandatoryParameters;
-    }
+	public void setOptionalPlaceholders(String optionalPlaceholders){
+		this.optionalPlaceholders = optionalPlaceholders;
+	}
 
-    public void setMandatoryParameters(String mandatoryParameters) {
-        this.mandatoryParameters = mandatoryParameters;
-    }
+	public String getOptionalPlaceholders(){
+		return optionalPlaceholders;
+	}
 
-    public String getOptionalPlaceholders() {
-        return optionalPlaceholders;
-    }
+	public void setValidateClickUrl(boolean validateClickUrl){
+		this.validateClickUrl = validateClickUrl;
+	}
 
-    public void setOptionalPlaceholders(String optionalPlaceholders) {
-        this.optionalPlaceholders = optionalPlaceholders;
-    }
+	public boolean isValidateClickUrl(){
+		return validateClickUrl;
+	}
 
-    public Boolean getValidateImpressionUrl() {
-        return validateImpressionUrl;
-    }
+	public void setValidateLandingPageUrl(boolean validateLandingPageUrl){
+		this.validateLandingPageUrl = validateLandingPageUrl;
+	}
 
-    public void setValidateImpressionUrl(Boolean validateImpressionUrl) {
-        this.validateImpressionUrl = validateImpressionUrl;
-    }
+	public boolean isValidateLandingPageUrl(){
+		return validateLandingPageUrl;
+	}
 
-    public Boolean getValidateClickUrl() {
-        return validateClickUrl;
-    }
+	public void setParametersReplacements(List<Object> parametersReplacements){
+		this.parametersReplacements = parametersReplacements;
+	}
 
-    public void setValidateClickUrl(Boolean validateClickUrl) {
-        this.validateClickUrl = validateClickUrl;
-    }
+	public List<Object> getParametersReplacements(){
+		return parametersReplacements;
+	}
 
-    public Boolean getAllowImpressionAutofill() {
-        return allowImpressionAutofill;
-    }
+	public void setAllowImpressionAutofill(boolean allowImpressionAutofill){
+		this.allowImpressionAutofill = allowImpressionAutofill;
+	}
 
-    public void setAllowImpressionAutofill(Boolean allowImpressionAutofill) {
-        this.allowImpressionAutofill = allowImpressionAutofill;
-    }
+	public boolean isAllowImpressionAutofill(){
+		return allowImpressionAutofill;
+	}
 
-    public Boolean getRequireClickUrl() {
-        return requireClickUrl;
-    }
+	public void setIdTrackingSolution(int idTrackingSolution){
+		this.idTrackingSolution = idTrackingSolution;
+	}
 
-    public void setRequireClickUrl(Boolean requireClickUrl) {
-        this.requireClickUrl = requireClickUrl;
-    }
+	public int getIdTrackingSolution(){
+		return idTrackingSolution;
+	}
 
-    public Boolean getValidateLandingPageUrl() {
-        return validateLandingPageUrl;
-    }
+	public void setMandatoryParameters(String mandatoryParameters){
+		this.mandatoryParameters = mandatoryParameters;
+	}
 
-    public void setValidateLandingPageUrl(Boolean validateLandingPageUrl) {
-        this.validateLandingPageUrl = validateLandingPageUrl;
-    }
+	public String getMandatoryParameters(){
+		return mandatoryParameters;
+	}
 
-    public List<Object> getParametersReplacements() {
-        return parametersReplacements;
-    }
+	public void setName(String name){
+		this.name = name;
+	}
 
-    public void setParametersReplacements(List<Object> parametersReplacements) {
-        this.parametersReplacements = parametersReplacements;
-    }
+	public String getName(){
+		return name;
+	}
 
+	public void setValidateImpressionUrl(boolean validateImpressionUrl){
+		this.validateImpressionUrl = validateImpressionUrl;
+	}
+
+	public boolean isValidateImpressionUrl(){
+		return validateImpressionUrl;
+	}
+
+	public void setLogo(String logo){
+		this.logo = logo;
+	}
+
+	public String getLogo(){
+		return logo;
+	}
+
+	public void setImpressionUrl(String impressionUrl){
+		this.impressionUrl = impressionUrl;
+	}
+
+	public String getImpressionUrl(){
+		return impressionUrl;
+	}
+
+	public void setClickUrl(String clickUrl){
+		this.clickUrl = clickUrl;
+	}
+
+	public String getClickUrl(){
+		return clickUrl;
+	}
+
+	public void setRequireClickUrl(boolean requireClickUrl){
+		this.requireClickUrl = requireClickUrl;
+	}
+
+	public boolean isRequireClickUrl(){
+		return requireClickUrl;
+	}
 }

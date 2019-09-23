@@ -7,13 +7,13 @@ import com.ui.automation.elements.base.BaseElement;
 /**
  * Created by Dana Shalev on 19/11/2015.
  */
-public class Button extends BaseElement {
+public class Button extends BaseElement implements IControl{
+
+    private static final String DECADENT_BUTTON_XPATH = ".//button";
 
     public Button(Locator locator, Element parent) {
         super(locator, parent);
     }
-
-    private static final String DECENDENT_BUTTON_XPATH = ".//button";
 
     public Button click() {
         Button btnToClick = getButtonElement();
@@ -61,9 +61,9 @@ public class Button extends BaseElement {
             btnForEnabled.isThisElementVisible();
             tag = this.getTagName();
             if (!tag.equalsIgnoreCase("button") && !tag.equalsIgnoreCase("unknown"))
-                btnForEnabled = new Button(Locator.xpath(DECENDENT_BUTTON_XPATH), this);
+                btnForEnabled = new Button(Locator.xpath(DECADENT_BUTTON_XPATH), this);
         } else if (!tag.equalsIgnoreCase("button")) {
-            btnForEnabled = new Button(Locator.xpath(DECENDENT_BUTTON_XPATH), this);
+            btnForEnabled = new Button(Locator.xpath(DECADENT_BUTTON_XPATH), this);
         }
         return btnForEnabled;
     }
@@ -72,4 +72,8 @@ public class Button extends BaseElement {
         new BaseElement(Locator.xpath(".//span[contains(@class, '" + iconClass + "')]"), this).expectVisible();
     }
 
+    @Override
+    public void setValue(Object value) {
+        click();
+    }
 }

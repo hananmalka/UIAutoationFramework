@@ -2,17 +2,16 @@ package com.ui.automation.pages.advertisers.newAdvertiserPage.elements.panesCont
 
 import com.ui.automation.elements.api.Element;
 import com.ui.automation.elements.base.BaseElement;
-import com.ui.automation.elements.componentcontent.ComponentContent;
 import com.ui.automation.locator.Locator;
 import com.ui.automation.pages.advertisers.newAdvertiserPage.elements.NewAdvertiserPageHeader;
-import com.ui.automation.pages.advertisers.newAdvertiserPage.elements.panes.MailingListPane;
-import com.ui.automation.pages.advertisers.newAdvertiserPage.elements.panes.MainPane;
+import com.ui.automation.pages.advertisers.newAdvertiserPage.elements.panes.MailingListPanel;
+import com.ui.automation.pages.advertisers.newAdvertiserPage.elements.panes.MainPanel;
 
 public class NewAdvertiserForm extends BaseElement {
 
     public NewAdvertiserPageHeader newAdvertiserPageHeader;
-    public MainPane generalSettingsPane;
-    public MailingListPane mailingListPane;
+    public MainPanel generalSettingsPane;
+    public MailingListPanel mailingListPane;
     public TitlesGroup titlesGroup;
     public BudgetAndTimeLimitationGroup budgetAndTimeLimitationGroup;
     public BudgetGroup budgetGroups;
@@ -20,8 +19,8 @@ public class NewAdvertiserForm extends BaseElement {
     public NewAdvertiserForm(Element parent) {
         super(Locator.className("component-content"), parent);
         newAdvertiserPageHeader = new NewAdvertiserPageHeader(this);
-        generalSettingsPane = new MainPane(this);
-        mailingListPane = new MailingListPane(this);
+        generalSettingsPane = new MainPanel(this);
+        mailingListPane = new MailingListPanel(this);
         titlesGroup = new TitlesGroup(this);
         budgetAndTimeLimitationGroup = new BudgetAndTimeLimitationGroup(this);
         budgetGroups = new BudgetGroup(this);

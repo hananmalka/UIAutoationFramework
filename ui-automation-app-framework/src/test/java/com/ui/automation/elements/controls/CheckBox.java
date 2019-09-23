@@ -1,10 +1,11 @@
 package com.ui.automation.elements.controls;
 
+import com.hp.gagawa.java.elements.B;
 import com.ui.automation.locator.Locator;
 import com.ui.automation.elements.api.Element;
 import com.ui.automation.elements.base.BaseElement;
 
-public class CheckBox extends BaseElement {
+public class CheckBox extends BaseElement{
 
     public CheckBox(Element parent) {
         super(Locator.xpath(".//input[@type='checkbox']//.."), parent);
@@ -62,4 +63,9 @@ public class CheckBox extends BaseElement {
         getDriver().expects().elementToContainText(this, expectedValue);
         return this;
     }
+
+//    @Override
+//    public void setValue(Class<?> value) {
+//        set(value);
+//    }
 }

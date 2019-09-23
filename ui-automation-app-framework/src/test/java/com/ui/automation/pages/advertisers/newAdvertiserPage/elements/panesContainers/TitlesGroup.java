@@ -4,7 +4,7 @@ import com.ui.automation.elements.base.BaseElement;
 import com.ui.automation.elements.containers.Form;
 import com.ui.automation.elements.controls.Button;
 import com.ui.automation.locator.Locator;
-import com.ui.automation.pages.advertisers.newAdvertiserPage.elements.panes.TitleRowPane;
+import com.ui.automation.pages.advertisers.newAdvertiserPage.elements.panes.TitleRowPanel;
 
 public class TitlesGroup extends Form {
 
@@ -16,11 +16,11 @@ public class TitlesGroup extends Form {
         return buttonField(Locator.id("advertiser-titles-add-group-btn"));
     }
 
-    public TitleRowPane newTitleRowPane() {
-        return new TitleRowPane("Paste Package Name", this);
+    public TitleRowPanel newTitleRowPane() {
+        return new TitleRowPanel("Paste Package Name", this);
     }
 
-    public TitleRowPane existTitleRowPane(String placeholder) {
-        return new TitleRowPane(placeholder, this);
+    public TitleRowPanel existTitleRowPane(String placeholder) {
+        return new TitleRowPanel(placeholder, this);
     }
 }

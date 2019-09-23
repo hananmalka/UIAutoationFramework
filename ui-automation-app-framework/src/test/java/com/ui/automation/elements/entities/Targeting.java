@@ -1,20 +1,19 @@
 package com.ui.automation.elements.entities;
 
-import com.google.gson.annotations.Expose;
+import javax.annotation.Generated;
 import com.google.gson.annotations.SerializedName;
 
-public class Targeting {
+@Generated("com.robohorse.robopojogenerator")
+public class Targeting{
 
-    @SerializedName("brand")
-    @Expose
-    private Brand brand;
+	@SerializedName("age")
+	private Age age;
 
-    public Brand getBrand() {
-        return brand;
-    }
+	public void setAge(Age age){
+		this.age = age;
+	}
 
-    public void setBrand(Brand brand) {
-        this.brand = brand;
-    }
-
+	public Age getAge(){
+		return age;
+	}
 }

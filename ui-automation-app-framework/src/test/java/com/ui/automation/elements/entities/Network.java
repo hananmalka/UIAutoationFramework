@@ -1,52 +1,52 @@
 package com.ui.automation.elements.entities;
 
-import com.google.gson.annotations.Expose;
+import javax.annotation.Generated;
 import com.google.gson.annotations.SerializedName;
 
-public class Network {
+@Generated("com.robohorse.robopojogenerator")
+public class Network{
 
-    @SerializedName("source")
-    @Expose
-    private Object source;
-    @SerializedName("id_status")
-    @Expose
-    private Integer idStatus;
-    @SerializedName("status")
-    @Expose
-    private String status;
-    @SerializedName("went_live")
-    @Expose
-    private String wentLive;
+	@SerializedName("id_status")
+	private int idStatus;
 
-    public Object getSource() {
-        return source;
-    }
+	@SerializedName("went_live")
+	private Object wentLive;
 
-    public void setSource(Object source) {
-        this.source = source;
-    }
+	@SerializedName("source")
+	private Object source;
 
-    public Integer getIdStatus() {
-        return idStatus;
-    }
+	@SerializedName("status")
+	private String status;
 
-    public void setIdStatus(Integer idStatus) {
-        this.idStatus = idStatus;
-    }
+	public void setIdStatus(int idStatus){
+		this.idStatus = idStatus;
+	}
 
-    public String getStatus() {
-        return status;
-    }
+	public int getIdStatus(){
+		return idStatus;
+	}
 
-    public void setStatus(String status) {
-        this.status = status;
-    }
+	public void setWentLive(Object wentLive){
+		this.wentLive = wentLive;
+	}
 
-    public String getWentLive() {
-        return wentLive;
-    }
+	public Object getWentLive(){
+		return wentLive;
+	}
 
-    public void setWentLive(String wentLive) {
-        this.wentLive = wentLive;
-    }
+	public void setSource(Object source){
+		this.source = source;
+	}
+
+	public Object getSource(){
+		return source;
+	}
+
+	public void setStatus(String status){
+		this.status = status;
+	}
+
+	public String getStatus(){
+		return status;
+	}
 }

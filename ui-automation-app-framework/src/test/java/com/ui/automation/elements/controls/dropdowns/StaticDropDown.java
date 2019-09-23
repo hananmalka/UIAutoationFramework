@@ -17,7 +17,7 @@ public class StaticDropDown extends BaseElement {
     }
 
     public void selectItem(String item) {
-        BaseElement listItem = new BaseElement(Locator.xpath("//li//a[text()='" + item + "']"), this);
+        BaseElement listItem = new BaseElement(Locator.xpath("//li//a[contains(text(),'" + item + "')]"), this);
         listItem.clickOn();
     }
 }

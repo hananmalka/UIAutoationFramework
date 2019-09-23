@@ -1,32 +1,35 @@
 package com.ui.automation.elements.entities;
 
 import java.util.List;
-import com.google.gson.annotations.Expose;
+import javax.annotation.Generated;
 import com.google.gson.annotations.SerializedName;
 
-public class Bids {
+@Generated("com.robohorse.robopojogenerator")
+public class Bids{
 
-    @SerializedName("geos")
-    @Expose
-    private List<Geo> geos = null;
-    @SerializedName("rate")
-    @Expose
-    private Integer rate;
+	@SerializedName("geos")
+	private List<GeosItem> geos;
 
-    public List<Geo> getGeos() {
-        return geos;
-    }
+	@SerializedName("rate")
+	private String rate;
 
-    public void setGeos(List<Geo> geos) {
-        this.geos = geos;
-    }
+	public void setGeos(List<GeosItem> geos){
+		this.geos = geos;
+	}
 
-    public Integer getRate() {
-        return rate;
-    }
+	public List<GeosItem> getGeos(){
+		return geos;
+	}
 
-    public void setRate(Integer rate) {
-        this.rate = rate;
-    }
+	public void setRate(String rate){
+		this.rate = rate;
+	}
 
+	public String getRate(){
+		return rate;
+	}
+
+	public class BidsFields {
+
+	}
 }
