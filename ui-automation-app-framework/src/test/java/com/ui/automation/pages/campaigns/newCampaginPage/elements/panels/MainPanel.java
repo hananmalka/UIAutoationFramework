@@ -19,11 +19,11 @@ import java.util.Map;
 
 public class MainPanel extends Panel {
 
-    private MainPanelFields mainPanelFields;
+    private Campaign.CampaignWebFields campaignWebFields;
 
     public MainPanel(BaseElement parent) {
         super(Locator.className("main"), parent);
-        mainPanelFields = new MainPanelFields();
+//        mainPanelFields = new MainPanelFields();
     }
 
     public void setAdvertiser(String advertiser) {
@@ -42,42 +42,56 @@ public class MainPanel extends Panel {
         costModelButton(costModel).click();
     }
 
-    private DropDown advertiserDropDown() {
+    public DropDown advertiserDropDown() {
         return dropDownField(Locator.id("advertiserDropdown"));
     }
 
-    private DropDown titleDropDown() {
+    public DropDown titleDropDown() {
         return dropDownField(Locator.id("advertiserTitleDropdown"));
     }
 
-    private TextBox bidTextBox() {
+    public TextBox bidTextBox() {
         return textBoxField(Locator.id("bid"));
     }
 
-    private Button costModelButton(String costModel) {
+    public Button costModelButton(String costModel) {
         return buttonField(Locator.id(costModel));
     }
 
+
     public void fillPanel(Campaign campaign) {
+        campaignWebFields = campaign.new CampaignWebFields();
         try {
             Field[] campaignObjectFields = Campaign.class.getDeclaredFields();
             for (Field field : campaignObjectFields) {
-                if (mainPanelFields.fieldToElementsMap.get(field.getType()) != null) {
-                    for (int i = 0; i < mainPanelFields.fieldToElementsMap.get(field.getType()).size(); i++) {
-                        mainPanelFields.fieldToElementsMap.get(field.getType()).get(i).setValue(campaign.getCampaignWebFields().objectFieldToWebElementMap.get(field).get(i));
-                    }
+                if (field.get(campaign) != null && campaignWebFields.fieldToWebElementMap.get(field).clazz.isInstance(this)) {
+                    campaignWebFields.fieldToWebElementMap.get(field).webElement.setValue(field.get(campaign));
                 }
             }
         } catch (Exception e) {
         }
     }
-
-    private class MainPanelFields {
-
-        Map<Object, List<IControl>> fieldToElementsMap = new HashMap<>();
-
-        MainPanelFields() {
-            fieldToElementsMap.put(AdvertiserTitles.class, Arrays.asList(advertiserDropDown(), titleDropDown()));
-        }
-    }
+//    public void fillPanel(Campaign campaign) {
+//        try {
+//            Field[] campaignObjectFields = Campaign.class.getDeclaredFields();
+//            for (Field field : campaignObjectFields) {
+//                if (mainPanelFields.fieldToElementsMap.get(field.getType()) != null) {
+//                    for (int i = 0; i < mainPanelFields.fieldToElementsMap.get(field.getType()).size(); i++) {
+//                        mainPanelFields.fieldToElementsMap.get(field.getType()).get(i).setValue(campaign.getCampaignWebFields().objectFieldToWebElementMap.get(field).get(i));
+//                    }
+//                }
+//            }
+//        } catch (Exception e) {
+//        }
+//    }
+//
+//    private class MainPanelFields {
+//
+//        Map<Object, List<IControl>> fieldToElementsMap = new HashMap<>();
+//
+//        MainPanelFields() {
+//            fieldToElementsMap.put(AdvertiserTitles.class, Arrays.asList(advertiserDropDown(), titleDropDown()));
+//            fieldToElementsMap.put(String.class, Arrays.asList(costModelButton()));
+//        }
+//    }
 }

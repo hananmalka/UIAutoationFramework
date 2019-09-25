@@ -5,10 +5,10 @@ import com.applitools.eyes.MatchLevel;
 import com.applitools.eyes.ProxySettings;
 import com.mqm.automation.ui.services.execution.ApplicationContextHolder;
 import com.mqm.automation.ui.services.reports.Reporter;
-import com.ui.automation.common.exception.MaasUIAutomationException;
-import com.ui.automation.common.junit.TestDetailsHolder;
 import com.ui.automation.common.element.config.TestProperties;
 import com.ui.automation.common.element.items.SpecialKeys;
+import com.ui.automation.common.exception.MaasUIAutomationException;
+import com.ui.automation.common.junit.TestDetailsHolder;
 import com.ui.automation.selenium.service.LocatorService;
 import com.ui.automation.selenium.wd.angular.ClientSideScripts;
 import org.imgscalr.Scalr;
@@ -24,18 +24,16 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
-import javax.imageio.IIOImage;
 import javax.imageio.ImageIO;
-import javax.imageio.ImageWriteParam;
-import javax.imageio.ImageWriter;
-import javax.imageio.stream.FileImageOutputStream;
 import java.awt.image.BufferedImage;
 import java.io.*;
 import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.*;
+import java.util.Date;
+import java.util.List;
+import java.util.Set;
 import java.util.logging.Logger;
 
 /**
