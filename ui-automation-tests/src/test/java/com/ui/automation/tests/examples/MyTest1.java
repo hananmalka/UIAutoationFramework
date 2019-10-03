@@ -74,7 +74,6 @@ public class MyTest1 extends BaseAutomationTest {
         UI.sideBarMenu.navigateToPage("Campaigns");
         UI.campaignsPage.clickCreateCampaignButton();
         UI.newCampaignPage.newCampaignForm.generalSettingsGroup.mainPanel.fillPanel(campaign);
-//        UI.newCampaignPage.newCampaignForm.generalSettingsGroup.fillMainPanel(campaign);
 
 
 //        UI.newCampaignPage.newCampaignForm.generalSettingsGroup.mainPanel.setAdvertiser(campaign.getAdvertiserTitles().getAdvertisers().getName());
@@ -90,8 +89,5 @@ public class MyTest1 extends BaseAutomationTest {
         UI.campaignsPage.clickCreateCampaignButton();
 
         UI.newCampaignPage.newCampaignForm.generalSettingsGroup.mainPanel.fillPanel(campaign);
-
-
-        UI.newCampaignPage.newCampaignForm.generalSettingsGroup.fillMainPanel(campaign);
     }
 }

@@ -1,23 +1,17 @@
 package com.ui.automation.tests;
 
+import com.mqm.automation.ui.services.reports.Reporter;
 import com.ui.automation.app.listeners.BrowserManagerListener;
 import com.ui.automation.app.listeners.MaasTestContextListener;
 import com.ui.automation.app.listeners.ReportCreationListener;
 import com.ui.automation.app.listeners.ReportFlushListener;
-import com.ui.automation.common.exception.MaasUIAutomationException;
-import com.mqm.automation.ui.services.reports.Reporter;
-import com.ui.automation.selenium.lifecycle.DriverTestContext;
-//import com.mqm.qa.rest.api.admin.Authentication;
-//import com.mqm.qa.rest.api.admin.SaasMockPortal;
-//import com.mqm.qa.rest.api.admin.SharedSpaces;
-//import com.mqm.qa.rest.api.admin.Workspace;
-//import com.mqm.qa.rest.api.network.core.StatusCode;
-//import com.mqm.qa.rest.api.network.data.RestData;
-//import com.mqm.qa.rest.api.utils.RestUtils;
-//import com.mqm.qa.rest.api.validators.StatusCodeValidator;
 import com.ui.automation.app.runners.SpringJUnit4ClassReporterRunner;
+import com.ui.automation.common.exception.MaasUIAutomationException;
+import com.ui.automation.selenium.lifecycle.DriverTestContext;
 import com.ui.automation.selenium.wd.Browser;
 import org.apache.commons.lang.RandomStringUtils;
+import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.rules.TestRule;
 import org.junit.rules.TestWatcher;
@@ -35,8 +29,6 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
-
-import static java.lang.System.getProperty;
 
 // TODO: we need the MaasRunner in order to run the `ReportRunListener`
 // in order to remove it we need to move the logic to another listener (maybe ReportCreationListener)
@@ -104,36 +96,13 @@ public abstract class BaseAutomationTest extends AbstractJUnit4SpringContextTest
 
     @NonStaticBeforeClass
     public void authenticate() {
-        createTenant();
-        restAuthenticate();
         uiAuthenticate();
     }
 
     private void createTenant() {
-//        // TODO: we cannot use SaasMockPortal.signIn which creates the tenant and authenticates since we have no way to acquire the tenantId afterwards
-//        String url = getUrl(createTenantUrlPattern);
-//
-//        RestData restDataCreateTenant = RestUtils.getData(url);
-//        if (!restDataCreateTenant.getResponse().getStatusCode().equals(StatusCode.OK_200)) {
-//            new StatusCodeValidator().validate200(restDataCreateTenant);
-//        }
-//        tenantId = SaasMockPortal.getTenantId(restDataCreateTenant.getResponse().getBody());
     }
 
     private void restAuthenticate() {
-//        // AUTHENTICATE
-//        Authentication.signIn(userName, "");
-//
-//        // SET CURRENT SHARED SPACE
-//        SharedSpaces.getInstance().setDefaultUsername(userName);
-//        SharedSpaces.getInstance().loadByName(tenantName);
-//        sharedspaceId = SharedSpaces.getInstance().getSharedSpace();
-//
-//        // CREATE WORKSPACE
-//        workspaceId = SharedSpaces.getInstance().createWorkspaceForUser(SharedSpaces.getInstance().getDefaultUserId().toString());
-//
-//        // SET CURRENT WORKSPACE
-//        Workspace.getInstance().setWorkspaceId(workspaceId);
     }
 
     // TODO: DANA - ALEX - is this the right way to login in the browser

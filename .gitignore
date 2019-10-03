@@ -1,2 +1,7 @@
 *.iml
 .idea
+*.class
+*.jar
+*.html
+*.properties
+*.log

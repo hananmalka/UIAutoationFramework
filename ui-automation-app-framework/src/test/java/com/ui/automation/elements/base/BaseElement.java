@@ -2,6 +2,7 @@ package com.ui.automation.elements.base;
 
 import com.mqm.automation.ui.services.execution.ApplicationContextHolder;
 import com.ui.automation.common.element.items.SpecialKeys;
+import com.ui.automation.elements.impl.RootElement;
 import com.ui.automation.locator.Locator;
 import com.ui.automation.elements.api.Element;
 import com.ui.automation.selenium.lifecycle.DriverTestContext;
@@ -51,7 +52,7 @@ public class BaseElement implements Element {
 	}
 
 	public void clickOn() {
-		expectSpinnerToDisappear();
+		expectSpinnerNotVisible();
 		getDriver().actions().click(this);
 	}
 
@@ -66,7 +67,7 @@ public class BaseElement implements Element {
 	}
 
 	public void doubleClick() {
-		expectSpinnerToDisappear();
+		expectSpinnerNotVisible();
 		getDriver().actions().doubleClick(this);
 	}
 
@@ -211,7 +212,7 @@ public class BaseElement implements Element {
 	}
 
 	public String getText(){
-		expectSpinnerToDisappear();
+		expectSpinnerNotVisible();
 		return getDriver().finds().getText(this);
 	}
 
@@ -220,7 +221,7 @@ public class BaseElement implements Element {
     }
 
 	public void setValue (String valueToEnter) {
-		expectSpinnerToDisappear();
+		expectSpinnerNotVisible();
 		isThisElementVisible();
 		clearFieldValue();
 		getDriver().actions().sendSpecialKeys(this, valueToEnter);
@@ -235,7 +236,7 @@ public class BaseElement implements Element {
     }
 
     public void sendBackspaceNTimesToElement(int times){
-		expectSpinnerToDisappear();
+		expectSpinnerNotVisible();
 		getDriver().actions().clickBackspaceNTimes(this, times);
 	}
 
@@ -244,7 +245,7 @@ public class BaseElement implements Element {
 	}
 
 	public BaseElement clearFieldValue () {
-		expectSpinnerToDisappear();
+		expectSpinnerNotVisible();
 		getDriver().expects().elementToBeEnabled(this);
 		getDriver().actions().clearText(this);
 		return this;
@@ -303,9 +304,9 @@ public class BaseElement implements Element {
 		return true;
 	}
 
-	private void expectSpinnerToDisappear() {
-		BaseElement rootElement = new BaseTopLevelElement(Locator.id("root"));
+	private void expectSpinnerNotVisible() {
 		BaseElement loadingSpinner = new BaseTopLevelElement(Locator.className("loading-spinner"));
-		getDriver().expects().elementNotVisible(rootElement, loadingSpinner);
+		getDriver().expects().elementNotVisible(RootElement.getInstance(), loadingSpinner);
 	}
+
 }
